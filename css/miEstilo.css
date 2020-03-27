@@ -9,6 +9,7 @@
     padding-right: 150px;
     margin: 10px;
     flex-basis: 450px;
+    cursor: pointer;
 }
 #proximos div h3, p, #pasados div h3, p{
     margin-bottom: 0;
@@ -18,6 +19,9 @@
 }
 .fecha{
     color: #888888;
+}
+.detalleProximos, .detallePasados{
+    display: none;
 }
 @media screen and (max-width: 576px){
     #proximos div, #pasados div{
