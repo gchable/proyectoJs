@@ -1,30 +1,26 @@
-#proximos{
+#proximos, #pasados{
     display: flex;
     justify-content: center;
     font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-
 }
-#proximos div{
+#proximos div, #pasados div{
     background-color: white;
     padding: 20px;
     padding-right: 150px;
     margin: 10px;
     flex-basis: 450px;
-    
 }
-#proximos div h3, p{
+#proximos div h3, p, #pasados div h3, p{
     margin-bottom: 0;
-
 }
-#proximos div h3{
+#proximos div h3, #pasados div h3{
     color: #3F6AE2;
 }
 .fecha{
     color: #888888;
 }
-
 @media screen and (max-width: 576px){
-    #proximos div{
+    #proximos div, #pasados div{
         padding-right: 0;
     }
 }
