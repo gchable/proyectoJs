@@ -3,9 +3,7 @@ $(document).ready(function () {
 
 });
 //Define las variables que necesites
-var eventosProximos;
-var html = "";
-var html2 = "";
+var eventosProximos, eventosPasados, html ="", html2="";
 
 //Carga los datos que estan en el JSON (info.json) usando AJAX
 fetch('info.json')
@@ -36,7 +34,7 @@ fetch('info.json')
     for (var i = 0; i < 2; i++) {
       html += `
         <div>
-          <h3">${eventosProximos[i].nombre}</h3>
+          <h3>${eventosProximos[i].nombre}</h3>
           <p class="fecha">${eventosProximos[i].fecha}</p>
           <p>${eventosProximos[i].descripcion}</p>
           <ul class="detalleProximos">
