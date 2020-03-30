@@ -34,14 +34,9 @@ fetch('info.json')
     for (var i = 0; i < eventosProximos.length; i++) {
       html += `
         <div>
-          <h3>${eventosProximos[i].nombre}</h3>
+          <h3 id="${eventosProximos[i].id}"><a href="proximos.html?id=${eventosProximos[i].id}">${eventosProximos[i].nombre}</h3><a>
           <p class="fecha">${eventosProximos[i].fecha}</p>
           <p>${eventosProximos[i].descripcion}</p>
-          <ul class="detalleProximos">
-                <li>Lugar: ${eventosProximos[i].lugar}</li>
-                <li>Invitados: ${eventosProximos[i].invitados}</li>
-                <li>Precio: ${eventosProximos[i].precio}</li>
-          </ul>
         </div>
       `;
     }
@@ -49,10 +44,7 @@ fetch('info.json')
     //Modifica el DOM agregando el html generado
     document.getElementById("proximos").innerHTML = html;
 
-    //Agregar funcion para mostrar el detalle
-    $("#proximos div").click(function () {
-      $(".detalleProximos").fadeToggle();
-    });
+
   })
   .catch(function (err) {
     console.error(err);

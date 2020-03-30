@@ -34,14 +34,9 @@ fetch('info.json')
     for (var i = 0; i < 2; i++) {
       html += `
         <div>
-          <h3>${eventosProximos[i].nombre}</h3>
+          <h3 id="${eventosProximos[i].id}"><a href="proximos.html?id=${eventosProximos[i].id}">${eventosProximos[i].nombre}</h3><a>
           <p class="fecha">${eventosProximos[i].fecha}</p>
           <p>${eventosProximos[i].descripcion}</p>
-          <ul class="detalleProximos">
-                <li>Lugar: ${eventosProximos[i].lugar}</li>
-                <li>Invitados: ${eventosProximos[i].invitados}</li>
-                <li>Precio: ${eventosProximos[i].precio}</li>
-          </ul>
         </div>
       `;
     }
@@ -50,7 +45,7 @@ fetch('info.json')
     document.getElementById("proximos").innerHTML = html;
 
     //Agregar funcion para mostrar el detalle
-    $("#proximos div").click(function () {
+    $("div[id=proximos] h3").click(function () {
       $(".detalleProximos").fadeToggle();
     });
 
@@ -75,14 +70,9 @@ fetch('info.json')
     for (var i = 0; i < 2; i++) {
       html2 += `
         <div>
-          <h3>${eventosPasados[i].nombre}</h3>
+          <h3 id="${eventosPasados[i].id}"><a href="pasados.html?id=${eventosPasados[i].id}">${eventosPasados[i].nombre}</h3><a>
           <p class="fecha">${eventosPasados[i].fecha}</p>
           <p>${eventosPasados[i].descripcion}</p>
-          <ul class="detallePasados">
-                <li>Lugar: ${eventosPasados[i].lugar}</li>
-                <li>Invitados: ${eventosPasados[i].invitados}</li>
-                <li>Precio: ${eventosPasados[i].precio}</li>
-          </ul>
         </div>
       `;
     }
@@ -91,7 +81,7 @@ fetch('info.json')
     document.getElementById("pasados").innerHTML = html2;
 
     //Agregar funcion para mostrar el detalle
-    $("#pasados div").click(function () {
+    $("div[id=pasados] h3").click(function () {
       $(".detallePasados").fadeToggle();
     });
   })

@@ -36,14 +36,9 @@ fetch('info.json')
     for (var i = 0; i < eventosPasados.length; i++) {
       html2 += `
         <div>
-          <h3>${eventosPasados[i].nombre}</h3>
+          <h3 id="${eventosPasados[i].id}"><a href="pasados.html?id=${eventosPasados[i].id}">${eventosPasados[i].nombre}</h3><a>
           <p class="fecha">${eventosPasados[i].fecha}</p>
           <p>${eventosPasados[i].descripcion}</p>
-          <ul class="detallePasados">
-                <li>Lugar: ${eventosPasados[i].lugar}</li>
-                <li>Invitados: ${eventosPasados[i].invitados}</li>
-                <li>Precio: ${eventosPasados[i].precio}</li>
-          </ul>
         </div>
       `;
     }

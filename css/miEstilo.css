@@ -8,20 +8,27 @@
     padding: 20px;
     padding-right: 150px;
     margin: 10px;
-    flex-basis: 450px;
-    cursor: pointer;
+    flex-basis: 700px;
 }
+
 #proximos div h3, p, #pasados div h3, p{
     margin-bottom: 0;
 }
+
 #proximos div h3, #pasados div h3{
     color: #3F6AE2;
 }
 .fecha{
     color: #888888;
 }
-.detalleProximos, .detallePasados{
-    display: none;
+#pasados div .precio, #proximos div .precio{
+    color: #39CCCC;
+}
+#pasados div .invitados, #proximos div .invitados{
+    color: #FF851B;
+}
+#pasados div .lugar, #proximos div .lugar{
+    color: #3D9970;
 }
 @media screen and (max-width: 576px){
     #proximos div, #pasados div{
